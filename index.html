@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tic-Tac-Toe</title>
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/main.js"></script>
+</head>
+<body>
+	
+
+	<div class="game">
+		<span class="winner"></span>
+		<table class="field">
+			<tr>
+				<td class="cell cell0"></td>
+				<td class="cell cell1"></td>
+				<td class="cell cell2"></td>
+			</tr>
+			<tr>
+				<td class="cell cell3"></td>
+				<td class="cell cell4"></td>
+				<td class="cell cell5"></td>
+			</tr>
+			<tr>
+				<td class="cell cell6"></td>
+				<td class="cell cell7"></td>
+				<td class="cell cell8"></td>
+			</tr>
+		</table>
+		<input type="button" class="btn btn_new" value="New game">
+	</div>
+
+	<div class="black_wrap">
+		<div class="settings">
+			<span class="request">Make your choice:</span>
+			<div>
+				<input id="choice_X" type="radio" name="choice" class="choice radio_cross" checked>
+				<label for="choice_X" class="choice_label">X</label>
+				<input id="choice_O" type="radio" name="choice" class="choice radio_nought">
+				<label for="choice_O" class="choice_label">O</label>
+			</div>
+			<input type="button" class="btn btn_start" value="Start">
+		</div>
+	</div>
+			
+</body>
+</html>

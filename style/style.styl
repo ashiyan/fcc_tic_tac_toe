@@ -1,0 +1,115 @@
+grain = #d7cec7
+blackboard = #565656
+oxblood = #76323F
+tan_color = #c09f80
+light_green = #2ab500
+light_red = #b50000
+
+@font-face
+	font-family "Aaargh"
+	font-style normal
+	src url(../fonts/Aaargh.ttf)
+
+@font-face
+	font-family "Blowbrush"
+	font-style normal
+	src url(../fonts/Blowbrush.otf)
+
+@keyframes user_win
+	0%
+		text-shadow none
+	50%
+		text-shadow 0 0 35px light_green
+	100%
+		text-shadow none
+		
+@keyframes pc_win
+	0%
+		text-shadow none
+	50%
+		text-shadow 0 0 35px light_red
+	100%
+		text-shadow none
+	
+body
+	background-color grain
+	
+.settings
+.game
+	margin-top 30px
+	display flex
+	flex-direction column
+	flex-wrap wrap
+	justify-content center
+	align-items center
+	
+.winner
+	width 300px
+	height 40px
+	font-family "Aaargh"
+	text-align center
+	font-size 200%
+	color blackboard
+	font-weight bold
+	
+.black_wrap
+	position absolute
+	top 0
+	left 0
+	right 0
+	margin 100px auto
+	width 300px
+	height 200px
+	border-radius 30px
+	background-color alpha(grain, 0.95);
+	
+.request
+.btn
+	margin 10px
+	font-family "Aaargh"
+	font-size 120%
+	font-weight bold
+	color blackboard
+
+.btn
+	outline none
+	border none
+	border-radius 5px
+	color grain
+	background-color blackboard
+	width 100px
+	height 40px
+	box-shadow 1px 1px 5px alpha(black, 0.5)
+	font-size 90%
+	text-transform uppercase
+	cursor pointer
+	&:hover
+		box-shadow 0 0 5px alpha(black, 0.8) inset
+
+.choice
+	display none
+	&_label
+		margin 0 15px
+		font-family "Blowbrush"
+		font-size 200%
+		color blackboard
+		cursor pointer
+	&:checked + .choice_label
+	&_label:hover
+		text-shadow 0 0 15px light_green
+	
+.field
+	border-spacing 15px
+	
+.cell
+	width 100px
+	height 100px
+	position relative
+	text-align center
+	font-family "Blowbrush"
+	font-size 400%
+	color tan_color
+	background-color blackboard
+	box-shadow 1px 1px 5px alpha(black, 0.5)
+	border-radius 10px
+	cursor pointer

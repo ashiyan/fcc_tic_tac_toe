@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "Aaargh";
+  font-style: normal;
+  src: url("../fonts/Aaargh.ttf");
+}
+@font-face {
+  font-family: "Blowbrush";
+  font-style: normal;
+  src: url("../fonts/Blowbrush.otf");
+}
+body {
+  background-color: #d7cec7;
+}
+.settings,
+.game {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.winner {
+  width: 300px;
+  height: 40px;
+  font-family: "Aaargh";
+  text-align: center;
+  font-size: 200%;
+  color: #565656;
+  font-weight: bold;
+}
+.black_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 100px auto;
+  width: 300px;
+  height: 200px;
+  border-radius: 30px;
+  background-color: rgba(215,206,199,0.95);
+}
+.request,
+.btn {
+  margin: 10px;
+  font-family: "Aaargh";
+  font-size: 120%;
+  font-weight: bold;
+  color: #565656;
+}
+.btn {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #d7cec7;
+  background-color: #565656;
+  width: 100px;
+  height: 40px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  font-size: 90%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 0 5px rgba(0,0,0,0.8) inset;
+}
+.choice {
+  display: none;
+}
+.choice_label {
+  margin: 0 15px;
+  font-family: "Blowbrush";
+  font-size: 200%;
+  color: #565656;
+  cursor: pointer;
+}
+.choice:checked + .choice_label,
+.choice_label:hover {
+  text-shadow: 0 0 15px #2ab500;
+}
+.field {
+  border-spacing: 15px;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  font-family: "Blowbrush";
+  font-size: 400%;
+  color: #c09f80;
+  background-color: #565656;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  cursor: pointer;
+}
+@-webkit-keyframes user_win {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 35px #2ab500;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+@keyframes user_win {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 35px #2ab500;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+@-webkit-keyframes pc_win {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 35px #b50000;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+@keyframes pc_win {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 35px #b50000;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
